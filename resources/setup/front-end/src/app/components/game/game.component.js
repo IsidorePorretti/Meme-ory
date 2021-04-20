@@ -79,10 +79,10 @@
         clearInterval(this._timer);
 
         setTimeout(function() {  // TODO Step 3.2: use arrow function.
-            // TODO Step 1: replace with '../score.component.html' location
+            
             // TODO Step 3.2: use template literals
             // TODO Step 7: change path to: `score?name=${this._name}&size=${this._size}'&time=${timeElapsedInSeconds}`;
-            window.location = 'score.html?name=' + this._name + '&size=' + this._size + '&time=' + timeElapsedInSeconds;
+            window.location = '../score/score.component.html?name=' + this._name + '&size=' + this._size + '&time=' + timeElapsedInSeconds;
         }.bind(this), 750);    // TODO Step 3.2: Why bind(this)?
     }
 
