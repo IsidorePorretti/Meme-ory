@@ -6,10 +6,11 @@
     
     <link rel="stylesheet" href="../../styles/style.css">
     
-    <!-- TODO Step 2.1: change css location to '../../../../node_modules/bootstrap/dist/css/bootstrap.css' -->
-    <link rel="stylesheet" href="../../styles/bootstrap.css">
     
-    <link rel="stylesheet" href="./card/card.component.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="./score.component.css">
+
 </head>
 
 <body class="d-flex flex-column">
@@ -24,8 +25,18 @@
 
 <div class="container-fluid flex-grow-1 overflow-auto">
     <!-- TODO Step 7: Keep only this element -->
-    <main class="game-cmp">
-        <div class="cards flex-row h-100"></div>
+    <main class="score-cmp">
+        <div class="d-flex p-3">
+            <div class="flex-grow-1">
+                <h3 class="congrats">CONGRATS<br/><span id="name"></span></h3>
+            </div>
+            <div>
+                
+                <img src="./happy_homer.jpg" class="happy">
+                <p class="size"><span id="size"></span> pairs</p>
+                <p class="time"><span id="time"></span>s</p>
+            </div>
+        </div>
     </main>
 
     <footer class="navbar position-absolute fixed-bottom bg-dark">
@@ -34,25 +45,12 @@
 </div>
 </body>
 
-<template id="card-template">
-    <!-- TODO Step 7: move card-cmp in card.component.html -->
-    <main class="card-cmp">
-        <div class="card-wrapper">
-            <img class="card front-face" alt="card">
-            
-            <img class="card back-face" alt="card" src="./card/assets/back.png">
-        </div>
-    </main>
-</template>
-
 <!-- link to welcome controller -->
+
 <!-- TODO Step 7: remove all <script> tags -->
-
-    
-<script src="./game.component.js"></script>
-
-<script src="./card/card.component.js"></script>
+<script src="./score.component.js"></script>
 <script>
-    (function() {new GameComponent().init()})();
+    new ScoreComponent().init();
 </script>
 </html>
+
