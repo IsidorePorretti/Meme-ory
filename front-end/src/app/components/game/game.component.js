@@ -1,4 +1,6 @@
+import { parseUrl } from "../../utils/utils";
 // TODO Step 7 import "./game.component.html"
+
 
 (function () {    // TODO Step 7 remove this closure
     const environment = {
@@ -11,7 +13,7 @@
     class GameComponent {
         constructor(id) {
             // gather parameters from URL
-            const params = this.parseUrl();
+            const params = parseUrl();
 
             // save player name & game ize
             this._name = params.name;
@@ -127,21 +129,6 @@
             }
         }
 
-// TODO Step 6 implement getTemplate() {}
-        parseUrl() {
-               
-
-            return (window.location.href
-                .split('?')[1] || ''
-                )
-                .split('&')
-                .map(element => element.split('='))
-                .reduce((acc, [key, value]) => {
-                acc[key] = value;
-                return acc;
-                }, {});
-            
-        }
     }
 
 
