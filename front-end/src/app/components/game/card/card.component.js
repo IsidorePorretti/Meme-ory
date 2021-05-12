@@ -1,33 +1,31 @@
-// TODO Step 7 import "./card.component.html"
+// front-end/src/app/components/game/card/card.component.js
+import { Component } from "../../../utils/component";
 
-(function() {   // TODO Step 7 remove this closure
+import "./card.component.css";
+import template from "./card.component.html";
 
- 
-        class CardComponent {   
-            constructor(id) {
+
+
+
+export class CardComponent extends Component {
+
+    getTemplate() {
+            return template;
+        }
     
-        // is this card flipped ?
-        this._flipped = false;
-
-        // has the matching card has been discovered already ?
-        this.matched = false;
-
-        this._id = id;
-            
-        // TODO Step 7: We can access the element from the component class that built an element from the template
-        // TODO Step 7: don't use document.getElementById anymore
-        this._elt = document.getElementById('card-template').content.cloneNode(true).firstElementChild;
-        this._imageElt = this._elt.querySelector('.card-wrapper');
+        constructor(id) {
+            super("card");
+        
+            // ...
+            // TODO Step 7: Update the path for images
+            this._imageElt.querySelector(
+              "img.front-face"
+            ).src = `src/app/components/game/card/assets/card-${this._id}.png`;
+            this._imageElt.querySelector("img.back-face").src =
+              "src/app/components/game/card/assets/back.png";
+          }
         
         
-        // TODO Step 7: Update the path for images
-        this._imageElt.querySelector('img.front-face').src = `./card/assets/card-${this._id}.png`;
-        this._imageElt.querySelector('img.back-face').src = `./card/assets/back.png`;
-    
-        }
-        getElement() {
-            return this._elt;
-        }
     
         flip() {
             this._imageElt.classList.toggle('flip');
@@ -46,6 +44,6 @@
     }
 
     // put component in global scope, tu be runnable right from the HTML.
-    // TODO Step 7 export CardComponent
-    window.CardComponent = CardComponent;
-})();
+ 
+    
+;

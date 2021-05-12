@@ -1,3 +1,4 @@
+<!-- front-end/src/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,13 +6,19 @@
     <title>MÈME ory</title>
   </head>
 
-  <!-- TODO Step 7 - add the header -->
-
   <body class="d-flex flex-column">
-    <!-- TODO Step 7 - add the following tag 
+    <nav class="navbar bg-primary mb-3 shadow">
+      <!-- ... -->
+    </nav>
+   
+    <div class="container-fluid flex-grow-1 overflow-auto">
       <div id="content-outlet"></div>
-    -->
-
-    <!-- TODO Step 7 - add the footer -->
+      <!-- ^^^^^^^^  HERE ^^^^^^^^^^^ -->
+    
+      <footer class="navbar position-absolute fixed-bottom bg-dark">
+        <span>&copy The MEME ory corporation | 2021</span>
+      </footer>
+    </div>
+    
   </body>
 </html>

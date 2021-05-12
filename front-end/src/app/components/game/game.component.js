@@ -1,17 +1,30 @@
+// front-end/src/app/components/game/game.component.js
+import { Component } from "../../utils/component";
 import { parseUrl } from "../../utils/utils";
-// TODO Step 7 import "./game.component.html"
+
+import { CardComponent } from "./card/card.component";
+import template from "./game.component.html";
 
 
-(function () {    // TODO Step 7 remove this closure
+
+
     const environment = {
         api: {
             host: 'http://localhost:8081'
         }
     };
 
+  
+      
+    export class GameComponent extends Component {
+        
+        getTemplate() {
+            return template;
+          }
+        
+        constructor() {
+            super("game");
 
-    class GameComponent {
-        constructor(id) {
             // gather parameters from URL
             const params = parseUrl();
 
@@ -140,7 +153,6 @@ import { parseUrl } from "../../utils/utils";
    
 
     // put component in global scope, tu be runnable right from the HTML.
-    // TODO Step 7: export GameComponent
-    window.GameComponent = GameComponent;
-})();
+    
+;
 
