@@ -53,6 +53,8 @@ body > main {
  */
 
 /* card { ... } */
+
+/* card { ... } */
 .card-cmp {
     position: relative;
     display: inline-block !important;
@@ -60,43 +62,42 @@ body > main {
     width: 14%;
 
 
- .card-wrapper {
+.card-wrapper {
     position: relative;
     transform-style: preserve-3d;
     transition: all .5s;
+}
 
-
-:hover {
+.card-wrapper:hover {
     cursor: pointer;
 }
 
-:active {
+.card-wrapper:active {
     transform: scale(0.97);
     transition: transform .2s;
 }
 
-.front-face,
-.back-face {
+.card-wrapper .front-face,
+.card-wrapper .back-face {
     width: 100%;
     backface-visibility: hidden;
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
 }
 
-.front-face {
+.card-wrapper .front-face {
     transform: rotateY(180deg);
 }
 
-.back-face {
+.card-wrapper .back-face {
     position: absolute;
     top:0;
 }
 
-.flip {
+.card-wrapper.flip {
     transform: rotateY(180deg);
 }
+}
 
-}
-}
 /*****
  * Score Component
  */
