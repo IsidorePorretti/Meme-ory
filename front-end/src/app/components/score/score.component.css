@@ -18,9 +18,10 @@ body > main {
     overflow: auto;
 }
 
-/* global style */
+/* global style
+ primary default => color: #cb2468; */
 .bg-primary * {
-    color: #cb2468;
+  color: #cbb324;
 }
 
 .bg-dark * {

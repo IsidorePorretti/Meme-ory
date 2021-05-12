@@ -9,22 +9,35 @@ import template from "./card.component.html";
 
 export class CardComponent extends Component {
 
-    getTemplate() {
-            return template;
-        }
+    
     
         constructor(id) {
             super("card");
         
+            // is this card flipped ?
+        this._flipped = false;
+
+        // has the matching card has been discovered already ?
+        this.matched = false;
+
+        this._id = id;
+
+        this._elt = super.getElement();
+        this._imageElt = this._elt.querySelector('.card-wrapper');
+
+        
             // ...
-            // TODO Step 7: Update the path for images
             this._imageElt.querySelector(
               "img.front-face"
             ).src = `src/app/components/game/card/assets/card-${this._id}.png`;
             this._imageElt.querySelector("img.back-face").src =
               "src/app/components/game/card/assets/back.png";
           }
-        
+
+
+          getTemplate() {
+            return template;
+        }
         
     
         flip() {
