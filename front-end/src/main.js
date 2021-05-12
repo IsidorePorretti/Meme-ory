@@ -1,7 +1,7 @@
 // front-end/src/main.js
 
-import 'bootstrap/dist/css/bootstrap.css';
-import './app/styles/style.css'
+import 'bootstrap/dist/css/bootstrap.scss';
+import './app/styles/style.scss'
 import { Router } from './app/utils/router';
 import { WelcomeComponent } from './app/components/welcome/welcome.component';
 import { GameComponent } from './app/components/game/game.component';

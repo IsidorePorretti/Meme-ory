@@ -1,7 +1,7 @@
 // front-end/src/app/components/game/card/card.component.js
 import { Component } from "../../../utils/component";
 
-import "./card.component.css";
+import "./card.component.scss";
 import template from "./card.component.html";
 
 
@@ -25,7 +25,7 @@ export class CardComponent extends Component {
         this._elt = super.getElement();
         this._imageElt = this._elt.querySelector('.card-wrapper');
 
-        
+
             // ...
             this._imageElt.querySelector(
               "img.front-face"
