@@ -4,7 +4,7 @@
 
 
 # Elèves :
-# PORRETTI Isidore et SOW Ibrahima
+# [Isidore PORRETTI](https://github.com/IsidorePorretti) et SOW Ibrahima  [Ibrahima SOW](https://github.com/ibrah47)
 
 # Pour lancer le jeu, il faut cloner le projet et faire un npm install.
 # Ensuite, il faut faire un npm start dans le back-end puis un npm start dans le front-end
